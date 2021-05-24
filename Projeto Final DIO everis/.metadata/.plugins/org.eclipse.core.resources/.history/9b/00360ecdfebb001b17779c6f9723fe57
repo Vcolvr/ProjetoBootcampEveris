@@ -1,0 +1,5 @@
+package com.github.vcolvr.cities.api.entities;
+
+public class State {
+
+}

@@ -1,0 +1,26 @@
+package com.github.vcolvr.cities.api.controllers;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.github.vcolvr.cities.api.entities.Country;
+import com.github.vcolvr.cities.api.repositories.CountryRepository;
+
+@RestController
+public class CountryResource {
+
+	private final CountryRepository repository;
+
+	public CountryResource(final CountryRepository repository) {
+		this.repository = repository;
+	}
+
+	@GetMapping("/countries")
+	public List<Country> cities() {
+
+		return repository.findAll();
+
+	}
+}
